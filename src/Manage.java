@@ -15,7 +15,9 @@ public class Manage {
     }
 
     public static void saveFile() {
+        System.out.println("Saving.....");
         IOOperator.writeToFile("E:\\Module2-D17-CRUDtoBinaryFile\\new.txt",list);
+        System.out.println("File saved");
     }
 
     private static String getOthers() {

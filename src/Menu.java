@@ -20,7 +20,18 @@ public class Menu {
                 case "4" -> Manage.remove();
                 case "5" -> Manage.edit();
                 case "6" -> Manage.saveFile();
-                case "7" -> System.exit(0);
+                case "7" -> {
+                    System.out.println("Do you want to save file?");
+                    System.out.println("Yes       No      ");
+                    String answer = input.nextLine();
+                    if(answer.equals("Yes")){
+                        System.out.println("Saving.....");
+                        Manage.saveFile();
+                        System.out.println("File saved");
+                    }
+                    System.out.println("Exiting, see you again.");
+                    System.exit(0);
+                }
                 default -> System.out.println("Invalid input, re input");
             }
         }
