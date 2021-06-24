@@ -1,8 +1,9 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    public static void menu(){
-        while(true) {
+    public static void menu() {
+        while (true) {
             System.out.println("Product Management System");
             System.out.println("1. add");
             System.out.println("2. show");
@@ -10,7 +11,7 @@ public class Menu {
             System.out.println("4. remove");
             System.out.println("5. edit");
             System.out.println("6. save list");
-            System.out.println("7. exit");
+            System.out.println("7. save and exit");
             Scanner input = new Scanner(System.in);
             String choice = input.nextLine();
             switch (choice) {
@@ -21,14 +22,7 @@ public class Menu {
                 case "5" -> Manage.edit();
                 case "6" -> Manage.saveFile();
                 case "7" -> {
-                    System.out.println("Do you want to save file?");
-                    System.out.println("Yes       No      ");
-                    String answer = input.nextLine();
-                    if(answer.equals("Yes")){
-                        System.out.println("Saving.....");
-                        Manage.saveFile();
-                        System.out.println("File saved");
-                    }
+                    Manage.saveFile();
                     System.out.println("Exiting, see you again.");
                     System.exit(0);
                 }
